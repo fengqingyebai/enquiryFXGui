@@ -1,18 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="leijnse.info.Controller">
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-   </rowConstraints>
+<?import javafx.geometry.Insets?>
+<GridPane
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+   <padding>
+      <Insets top="10" right="10" bottom="10" left="10"/>
+   </padding>
    <children>
-      <DatePicker id="stichDatum" showWeekNumbers="true" />
+      <Label text="User name:" GridPane.columnIndex="0" GridPane.rowIndex="0"
+             GridPane.halignment="RIGHT" />
+      <Label text="Password: " GridPane.columnIndex="0" GridPane.rowIndex="1"
+             GridPane.halignment="RIGHT" />
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+      <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <HBox GridPane.columnIndex="0" GridPane.rowIndex="2"
+            GridPane.columnSpan="2" alignment="CENTER" spacing="10">
+         <children>
+            <Button text="Ok" />
+            <Button text="Cancel" />
+         </children>
+      </HBox>
    </children>
 </GridPane>
